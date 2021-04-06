@@ -1,0 +1,25 @@
+{
+  "name": "mxmanagement",
+  "version": "1.0.0",
+  "description": "app used to enhance decision making in a university",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francis Victor,Thankgod",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.4",
+    "cookie": "^0.4.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mathjs": "^9.2.0",
+    "method-override": "^3.0.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "underscore-node": "^0.1.2"
+  }
+}
