@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include("./partial/head")%>
+</head>
+<body>
+    <%- include("./partial/nav_Dboard")%>
+    <%- include("./partial/header")%>
+    <div>
+        <h1 class="text-center"><%= dept %></h1>
+
+        </div>
+        <div class="container">
+        <div class="row">
+            <table>
+                <th>
+                    <h3><%= record.session%> Student Record</h3>
+                </th>
+                <tr>
+                    <th>
+                        No. of Enrolled Students:
+                    </th>
+                    <td>
+                        <%= record.no_of_enrolled_stu%>
+                    </td>
+                    <th>
+                        No. of First Class Students:
+                    </th>
+                    <td>
+                        <%= record.no_of_firstClass_stu%>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        No. of Admitted Students:
+                    </th>
+                    <td>
+                        <%= record.no_of_admitted_stu%>
+                    </td>
+                    <th>
+                        No. of Second Class Students:
+                    </th>
+                    <td>
+                        <%= record.no_of_secondClass_stu%>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        No. of Graduating Students:
+                    </th>
+                    <td>
+                        <%= record.no_of_graduating_stu%>
+                    </td>
+                    <th class="text-center">
+                        No. of Third Class Students:
+                    </th>
+                    <td class="text-right">
+                        <%= record.no_of_thirdClass_stu%>
+                    </td>
+                </tr>
+                
+            </table>
+
+        </div>
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <button type="button" class="btn btn-info ml-4"><a href="<%= recordl%>">Records</a></button>
+        <button type="button" class="btn btn-info ml-4"><a href="<%= dash%>">Dashboard</a></button>
+    </div>
+    
+
+    <footer>
+        <div class=""> <h3>Quick Links</h3>
+         <ul>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Contact Us</a></li>
+             <li><a href="#">Contact developer</a></li>
+         </ul>
+     </div>
+     </footer>
+
+     
+
+
+
+          <!-- jQuery CDN - Slim version (=without AJAX) -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <!-- Popper.JS -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+          <!-- Bootstrap JS -->
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+          <!-- jQuery Custom Scroller CDN -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/helpers.esm.min.js" integrity="sha512-JC8H/YEABKWyV0Q/pgk3GfyrUCEiESg3ZM8DMdI8XD4zlwgtFyezG2dSenJ9pxAtJU2Bds6YNKYThXaLQrf9bw==" crossorigin="anonymous"></script>
+          <script  type="text/javascript">
+             $(document).ready(function(){
+      $("#sidebar").mCustomScrollbar({
+         theme:"minimal"
+      });
+      $('.toggle').on('click', function () {
+                 $('#sidebar').removeClass('active');
+                 
+            });
+             $('#dismiss').on('click', function () {
+                  $('#sidebar').addClass('active');
+                
+             });
+     
+      });
+          
+          </script>
+     
+          
+</body>
+</html>

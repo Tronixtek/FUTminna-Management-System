@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include("./partial/head")%>
+</head>
+<body>
+    <%- include("./partial/nav_Dboard")%>
+    <%- include("./partial/header")%>
+    <div class="jumbotron">
+        <% record.forEach(record => {%>
+            <div class="card">
+                <div class="card-title">
+                   <h4 class="p-2"><%= record.session%> Record</h4>
+                </div>
+                <table>
+                    <tr>
+                        <td class="text-center">
+                <a href="<%=detail%>/<%= record.id%>"><button type="button" class="btn btn-primary">Record Detail</button> </a>
+                        </td>
+                        <td class="text-center">
+                <form action="<%= del%>/<%=record.id%>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger">Delete Record</button>                
+                </form>
+                        </td>
+                        <td class="text-center">
+                            
+                            <a href="<%= edit%>/<%= record.id%>" ><button type="submit" class="btn btn-info">Edit Record</button></a>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <%})%>
+    </div>
+    <div class="">
+        <button type="button" class="btn btn-info ml-4"><a href="<%= dash%>">Dashboard</a></button>
+    </div>
+
+    <footer>
+        <div class=""> <h3>Quick Links</h3>
+         <ul>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Contact Us</a></li>
+             <li><a href="#">Contact developer</a></li>
+         </ul>
+     </div>
+     </footer>
+     
+          <!-- jQuery CDN - Slim version (=without AJAX) -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <!-- Popper.JS -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+          <!-- Bootstrap JS -->
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+          <!-- jQuery Custom Scroller CDN -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+     
+          <script  type="text/javascript">
+             $(document).ready(function(){
+      $("#sidebar").mCustomScrollbar({
+         theme:"minimal"
+      });
+      $('.toggle').on('click', function () {
+                 $('#sidebar').removeClass('active');
+                 
+            });
+             $('#dismiss').on('click', function () {
+                  $('#sidebar').addClass('active');
+                
+             });
+     
+      });
+          
+          </script>
+          
+</body>
+</html>

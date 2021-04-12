@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partial/head")%>
+<body>
+    <%- include("./partial/nav_Dboard")%>
+    <%- include("./partial/header")%>
+
+
+<h1 class="text-center"><%=dept%> Record Form</h1>
+<hr/>
+<div class="jumbotron" id="ff">
+    <form action="<%= data%>" method="POST">
+        <div class="form-group">
+            <label for="Session">Session:</label>
+            <input type="text"" name="session"  id="session" required class="form-control">
+            <label for="enrolled student">No. of Enrolled Student:</label>
+            <input type="number" name="no_of_enrolled_stu" id="no_of_enrolled_stu" required class="form-control">
+            <label for="admitted student">No. of Admitted Student:</label>
+            <input type="number" name="no_of_admitted_stu" id="no_of_admitted_stu" required class="form-control">
+            <label for="graduating student">No. of graduating Student:</label>
+            <input type="number" name="no_of_graduating_stu" id="no_of_graduating_stu" required class="form-control">
+            <label for="first class student">No. of FirstClass Students</label>
+            <input type="number" name="no_of_firstClass_stu" id="no_of_firstclass_stu" required class="form-control">
+            <label for="first class student">No. of SecondClass Students</label>
+            <input type="number" name="no_of_secondClass_stu" id="no_of_secondclass_stu" required class="form-control">
+            <label for="first class student">No. of ThirdClass Student</label>
+            <input type="number" name="no_of_thirdClass_stu" id="no_of_Thirdclass_stu " required class="form-control">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Save</button>
+            <button class="btn btn-secondary" type="button"><a href="<%= dash%>">Cancel</a></button>
+        </div>
+        
+    </form>
+    </div>
+
+
+
+         <!-- jQuery CDN - Slim version (=without AJAX) -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <!-- Popper.JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+     <!-- jQuery Custom Scroller CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+     <script  type="text/javascript">
+         $(document).ready(function(){
+ $("#sidebar").mCustomScrollbar({
+     theme:"minimal"
+ });
+ $('.toggle').on('click', function () {
+             $('#sidebar').removeClass('active');
+            
+         });
+         $('#dismiss').on('click', function () {
+             $('#sidebar').addClass('active');
+           
+         });
+
+ });
+     
+     </script>
+</body>
+</html>
