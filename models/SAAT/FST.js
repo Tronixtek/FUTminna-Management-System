@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const telSchema =new mongoose.Schema({
+const fstSchema = new mongoose.Schema({
     session:{
-        type:Number
+        type:String
     },
     no_of_enrolled_stu:{
-        type:Number
+        type:Number 
     },
     no_of_admitted_stu:{
-        type:Number
+        type:Number,
     },
     no_of_graduating_stu:{
         type:Number
@@ -21,7 +21,7 @@ const telSchema =new mongoose.Schema({
     },
     no_of_thirdClass_stu:{
         type:Number
-    },
+    }
 })
 
-module.exports = mongoose.model("Telecoms",telSchema);
+module.exports = mongoose.model("FST",fstSchema);

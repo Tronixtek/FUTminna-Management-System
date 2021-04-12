@@ -4,22 +4,22 @@ const electSchema =new mongoose.Schema({
     session:{
         type:Number
     },
-    no_of_enrolled_student:{
+    no_of_enrolled_stu:{
         type:Number
     },
-    no_of_admitted_student:{
+    no_of_admitted_stu:{
         type:Number
     },
-    no_of_grad_student:{
+    no_of_graduating_stu:{
         type:Number
     },
-    no_of_firstclass_stu:{
+    no_of_firstClass_stu:{
         type:Number
     },
-    no_of_secondclass_stu:{
+    no_of_secondClass_stu:{
         type:Number
     },
-    no_of_thirdclass_stu:{
+    no_of_thirdClass_stu:{
         type:Number
     },
 })

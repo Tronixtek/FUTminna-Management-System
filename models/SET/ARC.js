@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const telSchema =new mongoose.Schema({
+const arcSchema = new mongoose.Schema({
     session:{
-        type:Number
+        type:Number 
     },
-    no_of_enrolled_stu:{
-        type:Number
+    no_enrolled_stu:{
+        type:Number 
     },
     no_of_admitted_stu:{
-        type:Number
+        type:Number,
     },
     no_of_graduating_stu:{
         type:Number
@@ -24,4 +24,4 @@ const telSchema =new mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model("Telecoms",telSchema);
+module.exports = mongoose.model("ARC",arcSchema);
